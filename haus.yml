@@ -1,0 +1,8 @@
+apiVersion: haus.com/v1
+kind: Haus
+metadata:
+  name: sample-haus
+  namespace: default
+spec:
+  count: 1
+  location: montreal
