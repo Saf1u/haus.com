@@ -26,6 +26,8 @@ spec:
                   type: integer
                   minimum: 1
                   maximum: 10
+                replicas:
+                  type: integer
                 location:
                   type: string
             status:                           # Define the status schema
@@ -33,5 +35,12 @@ spec:
               properties:
                 state:
                   type: string
+      additionalPrinterColumns: #(optional)
+        - name: count
+          type: integer
+          jsonPath: .spec.count
       subresources:
         status: {}
+        scale:
+          specReplicasPath: .spec.replicas
+          statusReplicasPath: .status.replicas

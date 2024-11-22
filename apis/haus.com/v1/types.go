@@ -12,6 +12,7 @@ import (
 type HausSpec struct {
 	Count    int    `json:"count"`
 	Location string `json:"location"`
+	Replicas int `json:"replicas"`
 }
 
 // HausStatus defines the observed state of Haus
